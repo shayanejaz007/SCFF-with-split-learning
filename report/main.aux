@@ -1,0 +1,115 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand \oddpage@label [2]{}
+\citation{mcmahan2017fedavg}
+\citation{hinton2022forward}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\citation{hinton2022forward}
+\citation{nokland2019local}
+\citation{chen2020simclr}
+\citation{grill2020byol}
+\citation{bengio2007greedy}
+\citation{vepakomma2018split}
+\citation{thapa2022splitfed}
+\citation{mcmahan2017fedavg}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{4}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{4}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}The Forward-Forward Algorithm}{4}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Self-Supervised and Contrastive Learning}{4}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Greedy Layer-Wise Training}{4}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Split Learning}{4}{subsection.2.4}\protected@file@percent }
+\citation{pasquini2021unleashing}
+\citation{he2019model}
+\citation{li2020fedprox}
+\citation{karimireddy2020scaffold}
+\citation{krizhevsky2009cifar}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Privacy Risks of Activations}{5}{subsection.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Handling Non-IID Data}{5}{subsection.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{5}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{5}{Methodology}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Dataset and Preprocessing}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Network Architecture}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Network architecture. Layer 0 runs on the client; Layers 1 and 2 run on the server.}}{5}{table.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:arch}{{1}{5}{Network architecture. Layer 0 runs on the client; Layers 1 and 2 run on the server}{table.caption.2}{}}
+\citation{bengio2007greedy}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Positive and Negative Sample Construction}{6}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}SCFF Loss Function}{6}{subsection.3.4}\protected@file@percent }
+\newlabel{eq:scff_loss}{{4}{6}{SCFF Loss Function}{equation.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Per-layer training hyperparameters.}}{7}{table.caption.3}\protected@file@percent }
+\newlabel{tab:hyperparams}{{2}{7}{Per-layer training hyperparameters}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Split Learning Protocol}{7}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Pseudocode: Single-Client Split Training}{8}{subsection.3.6}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces SCFF Single-Client Split Training}}{8}{algocf.1}\protected@file@percent }
+\newlabel{alg:single}{{1}{8}{Pseudocode: Single-Client Split Training}{algocf.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Pseudocode: Multi-Client Sequential Relay}{8}{subsection.3.7}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces SCFF Multi-Client Sequential Relay}}{9}{algocf.2}\protected@file@percent }
+\newlabel{alg:multi}{{2}{9}{Pseudocode: Multi-Client Sequential Relay}{algocf.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Evaluation Protocol}{9}{subsection.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{9}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{9}{Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Single-Client Split Learning}{9}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Linear readout accuracy over 50 epochs for the single-client split configuration. Layer 0 on the client, Layers 1 and 2 on the server. Train accuracy reaches $\approx $85\%; test accuracy plateaus near 80\%.}}{10}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:single_accuracy}{{1}{10}{Linear readout accuracy over 50 epochs for the single-client split configuration. Layer 0 on the client, Layers 1 and 2 on the server. Train accuracy reaches $\approx $85\%; test accuracy plateaus near 80\%}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Multi-Client: 5 Clients}{10}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Multi-Client: 10 Clients}{10}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Comparison Table}{10}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Discussion of Results}{10}{subsection.4.5}\protected@file@percent }
+\citation{chen2020simclr}
+\citation{caron2021dino}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Console output for the single-client split run. Final train accuracy: 92.10\%; final test accuracy: 79.77\%.}}{11}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:single_console}{{2}{11}{Console output for the single-client split run. Final train accuracy: 92.10\%; final test accuracy: 79.77\%}{figure.caption.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces CIFAR-10 accuracy across training configurations. ``Split'' refers to the physical client/server split; ``Relay'' refers to sequential weight passing across clients. Results are from the linear readout evaluation after SCFF training.}}{11}{table.caption.8}\protected@file@percent }
+\newlabel{tab:comparison}{{3}{11}{CIFAR-10 accuracy across training configurations. ``Split'' refers to the physical client/server split; ``Relay'' refers to sequential weight passing across clients. Results are from the linear readout evaluation after SCFF training}{table.caption.8}{}}
+\citation{pasquini2021unleashing}
+\citation{abadi2016dp}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Linear readout accuracy for the 5-client sequential relay. Each client holds 10,000 training samples. Test accuracy is within $\approx $1--2\% of the single-client baseline.}}{12}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:5client_accuracy}{{3}{12}{Linear readout accuracy for the 5-client sequential relay. Each client holds 10,000 training samples. Test accuracy is within $\approx $1--2\% of the single-client baseline}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Limitations and Discussion}{12}{section.5}\protected@file@percent }
+\newlabel{sec:limitations}{{5}{12}{Limitations and Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Sequential Relay Is Slow}{12}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Activation Privacy at a Shallow Cut}{12}{subsection.5.2}\protected@file@percent }
+\citation{li2020fedprox}
+\citation{karimireddy2020scaffold}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Linear readout accuracy for the 10-client sequential relay. Each client holds 5,000 training samples. Test accuracy remains close to the single-client result.}}{13}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:10client_accuracy}{{4}{13}{Linear readout accuracy for the 10-client sequential relay. Each client holds 5,000 training samples. Test accuracy remains close to the single-client result}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Fixed Cut Point}{13}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Non-IID Correction Is Missing}{13}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Linear Probe May Understate Representation Quality}{13}{subsection.5.5}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{refs}
+\bibcite{abadi2016dp}{{1}{2016}{{Abadi et~al.}}{{Abadi, Chu, Goodfellow, et~al.}}}
+\bibcite{bengio2007greedy}{{2}{2007}{{Bengio et~al.}}{{Bengio, Lamblin, Popovici, and Larochelle}}}
+\bibcite{caron2021dino}{{3}{2021}{{Caron et~al.}}{{Caron, Touvron, Misra, et~al.}}}
+\bibcite{chen2020simclr}{{4}{2020}{{Chen et~al.}}{{Chen, Kornblith, Norouzi, and Hinton}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Scale Beyond CIFAR-10}{14}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Theoretical Guarantees}{14}{subsection.5.7}\protected@file@percent }
+\bibcite{grill2020byol}{{5}{2020}{{Grill et~al.}}{{Grill, Strub, Altch{\'e}, et~al.}}}
+\bibcite{he2019model}{{6}{2019}{{He et~al.}}{{He, Zhang, and Lee}}}
+\bibcite{hinton2022forward}{{7}{2022}{{Hinton}}{{}}}
+\bibcite{karimireddy2020scaffold}{{8}{2020}{{Karimireddy et~al.}}{{Karimireddy, Kale, Mohri, Reddi, Stich, and Suresh}}}
+\bibcite{krizhevsky2009cifar}{{9}{2009}{{Krizhevsky and Hinton}}{{}}}
+\bibcite{li2020fedprox}{{10}{2020}{{Li et~al.}}{{Li, Sahu, Zaheer, Sanjabi, Smola, and Smith}}}
+\bibcite{mcmahan2017fedavg}{{11}{2017}{{McMahan et~al.}}{{McMahan, Moore, Ramage, Hampson, and Ag{\"u}era~y Arcas}}}
+\bibcite{nokland2019local}{{12}{2019}{{N{\o }kland and Eidnes}}{{}}}
+\bibcite{pasquini2021unleashing}{{13}{2021}{{Pasquini et~al.}}{{Pasquini, Ateniese, and Bernaschi}}}
+\bibcite{thapa2022splitfed}{{14}{2022}{{Thapa et~al.}}{{Thapa, Chhetri, Ignatiadis, et~al.}}}
+\bibcite{vepakomma2018split}{{15}{2018}{{Vepakomma et~al.}}{{Vepakomma, Gupta, Swedish, and Raskar}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Source Code}{16}{section.A}\protected@file@percent }
+\newlabel{app:code}{{A}{16}{Source Code}{section.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}\texttt  {config.json} --- Architecture and Optimizer Configuration}{16}{subsection.A.1}\protected@file@percent }
+\newlabel{app:config}{{A.1}{16}{\texttt {config.json} --- Architecture and Optimizer Configuration}{subsection.A.1}{}}
+\newlabel{lst:config}{{1}{16}{config.json --- layer and optimizer hyperparameters for CIFAR-10 (and other datasets)}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces config.json --- layer and optimizer hyperparameters for CIFAR-10 (and other datasets).}}{16}{lstlisting.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}\texttt  {SCFF\_CIFAR\_Split.py} --- Single-Client Split Learning}{16}{subsection.A.2}\protected@file@percent }
+\newlabel{app:split}{{A.2}{16}{\texttt {SCFF\_CIFAR\_Split.py} --- Single-Client Split Learning}{subsection.A.2}{}}
+\newlabel{lst:split}{{2}{16}{SCFF\_CIFAR\_Split.py --- single-client split learning implementation. Layer 0 on client, Layers 1--2 on server. Includes SplitClient, SplitServer, SplitTrainer, and pre-training validation}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces SCFF\_CIFAR\_Split.py --- single-client split learning implementation. Layer 0 on client, Layers 1--2 on server. Includes SplitClient, SplitServer, SplitTrainer, and pre-training validation.}}{16}{lstlisting.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}\texttt  {SCFF\_CIFAR\_MultiClient.py} --- Multi-Client Sequential Relay}{31}{subsection.A.3}\protected@file@percent }
+\newlabel{app:multiclient}{{A.3}{31}{\texttt {SCFF\_CIFAR\_MultiClient.py} --- Multi-Client Sequential Relay}{subsection.A.3}{}}
+\newlabel{lst:multiclient}{{3}{31}{SCFF\_CIFAR\_MultiClient.py --- multi-client sequential relay implementation. CIFAR-10 is partitioned across N clients; Layer 0 weights are relayed client-to-client with full optimizer state}{lstlisting.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}{\ignorespaces SCFF\_CIFAR\_MultiClient.py --- multi-client sequential relay implementation. CIFAR-10 is partitioned across N clients; Layer 0 weights are relayed client-to-client with full optimizer state.}}{31}{lstlisting.3}\protected@file@percent }
+\gdef \@abspage@last{46}
