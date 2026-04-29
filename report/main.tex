@@ -115,7 +115,7 @@ high activation energy and negative samples (channel-concatenated with a differe
 produce low activation energy. Because the loss is already layer-local, the physical split
 boundary introduces no accuracy penalty --- the \texttt{.detach()} call at the split point is
 the same operation SCFF already performs between layers. On CIFAR-10, the single-client split
-configuration reaches 92.10\% training accuracy and 79.77\% test accuracy on the linear readout.
+configuration reaches 92.19\% training accuracy and 79.77\% test accuracy on the linear readout.
 The multi-client relay with 5 and 10 clients achieves comparable results, demonstrating that the
 relay mechanism preserves learning quality across partitioned data. No raw pixels or gradients
 are ever transmitted from client to server in any configuration.
@@ -475,24 +475,23 @@ while test accuracy rises in a step-like pattern, reaching around 78--80\%.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/fig1_1client_accuracy.jpeg}
+  \includegraphics[width=0.85\textwidth]{images/fig1_1client_accuracy.png}
   \caption{Linear readout accuracy over 50 epochs for the single-client split configuration.
            Layer~0 on the client, Layers~1 and 2 on the server. Train accuracy reaches
-           $\approx$85\%; test accuracy plateaus near 80\%.}
+           $\approx$92\%; test accuracy plateaus near 80\%.}
   \label{fig:single_accuracy}
 \end{figure}
 
-Figure~\ref{fig:single_console} shows the console output for the 10-client relay configuration
-(10 clients, 1 server), confirming final numbers of 92.10\% train accuracy and 79.77\% test
-accuracy. The gap between raw training accuracy and the readout train accuracy is expected; the
-linear probe overfits somewhat on the full training set, while the reported test accuracy remains
-the most meaningful metric.
+Figure~\ref{fig:single_console} shows the console output for the single-client split run,
+confirming a final train accuracy of 92.19\% and test accuracy of 79.77\%. The gap between raw
+training accuracy and the readout train accuracy is expected; the linear probe overfits somewhat
+on the full training set, while the reported test accuracy remains the most meaningful metric.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/fig2_1client_console.jpeg}
-  \caption{Console output for the 10-client relay run (10 clients, 1 server). Final train
-           accuracy: 92.10\%; final test accuracy: 79.77\%.}
+  \includegraphics[width=0.75\textwidth]{images/fig2_1client_console.png}
+  \caption{Console output for the single-client split run (1 client, 1 server). Final train
+           accuracy: 92.19\%; final test accuracy: 79.77\%.}
   \label{fig:single_console}
 \end{figure}
 
@@ -505,7 +504,7 @@ single-client result.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/fig3_5client_accuracy.jpeg}
+  \includegraphics[width=0.85\textwidth]{images/fig3_5client_accuracy.png}
   \caption{Linear readout accuracy for the 5-client sequential relay. Each client holds 10,000
            training samples. Test accuracy is within $\approx$1--2\% of the single-client
            baseline.}
@@ -521,10 +520,21 @@ effectively propagates learning across data shards.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\textwidth]{images/fig4_10client_accuracy.jpeg}
+  \includegraphics[width=0.85\textwidth]{images/fig4_10client_accuracy.png}
   \caption{Linear readout accuracy for the 10-client sequential relay. Each client holds 5,000
            training samples. Test accuracy remains close to the single-client result.}
   \label{fig:10client_accuracy}
+\end{figure}
+
+Figure~\ref{fig:10client_console} shows the console output for the 10-client relay run,
+confirming a final train accuracy of 84.15\% and test accuracy of 79.87\%.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\textwidth]{images/fig5_10client_console.jpg}
+  \caption{Console output for the 10-client relay run (10 clients, 1 server). Final train
+           accuracy: 84.15\%; final test accuracy: 79.87\%.}
+  \label{fig:10client_console}
 \end{figure}
 
 \subsection{Comparison Table}
@@ -544,9 +554,9 @@ literature on IID vs.\ non-IID convergence behavior.
     Configuration & Clients & Data/Client & Train Acc.\ & Test Acc.\ \\
     \midrule
     SCFF Baseline (no split) & 1  & 50,000 & $\sim$88--90\% & $\sim$78--82\% \\
-    SCFF Split (this work)   & 1  & 50,000 & 92.10\%        & 79.77\%        \\
+    SCFF Split (this work)   & 1  & 50,000 & 92.19\%        & 79.77\%        \\
     SCFF Relay (IID)         & 5  & 10,000 & $\sim$87--89\% & $\sim$77--81\% \\
-    SCFF Relay (IID)         & 10 & 5,000  & $\sim$85--87\% & $\sim$75--79\% \\
+    SCFF Relay (IID)         & 10 & 5,000  & 84.15\%        & 79.87\%        \\
     SCFF Relay (Non-IID)     & 10 & 5,000  & $\sim$83--86\% & $\sim$72--76\% \\
     \bottomrule
   \end{tabular}
