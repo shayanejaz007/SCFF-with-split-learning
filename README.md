@@ -606,3 +606,4 @@ Both scripts produce:
 ---
 
 *README generated from `SCFF_CIFAR_Split.py` and `SCFF_CIFAR_MultiClient.py`.*
+# SCFF-with-split-learning
