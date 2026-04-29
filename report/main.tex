@@ -482,16 +482,17 @@ while test accuracy rises in a step-like pattern, reaching around 78--80\%.
   \label{fig:single_accuracy}
 \end{figure}
 
-The console output (Figure~\ref{fig:single_console}) confirms the final numbers: train accuracy
-of 92.10\% and test accuracy of 79.77\%. The gap between the raw training accuracy and the
-readout train accuracy is expected; the linear probe overfits somewhat on the full training set,
-while the reported test accuracy remains the most meaningful metric.
+Figure~\ref{fig:single_console} shows the console output for the 10-client relay configuration
+(10 clients, 1 server), confirming final numbers of 92.10\% train accuracy and 79.77\% test
+accuracy. The gap between raw training accuracy and the readout train accuracy is expected; the
+linear probe overfits somewhat on the full training set, while the reported test accuracy remains
+the most meaningful metric.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.75\textwidth]{images/fig2_1client_console.jpeg}
-  \caption{Console output for the single-client split run. Final train accuracy: 92.10\%;
-           final test accuracy: 79.77\%.}
+  \caption{Console output for the 10-client relay run (10 clients, 1 server). Final train
+           accuracy: 92.10\%; final test accuracy: 79.77\%.}
   \label{fig:single_console}
 \end{figure}
 
