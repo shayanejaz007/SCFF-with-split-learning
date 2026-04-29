@@ -15,3 +15,5 @@ __pycache__/
 .env
 # Zip archives
 *.zip
+report/
+CSIT697_Final_Report.md
